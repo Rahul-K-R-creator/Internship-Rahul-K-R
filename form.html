@@ -1,0 +1,87 @@
+<!-- Complete Form Example -->
+<form action="/submit" method="POST">
+ 
+    <!-- Text Input -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    <br>
+ 
+    <!-- Email Input -->
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+<!-- Password Input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" minlength="8">
+    <br>
+ 
+    <!-- Number Input -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100">
+
+    <!--Mobile Number-->
+    <label for="phone">Mobile Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="Enter your mobile number" required>
+    <br>
+
+<!-- Radio Buttons (choose ONE) -->
+    <p>Experience Level:</p>
+    <input type="radio" id="beginner" name="level" value="beginner">
+    <label for="beginner">Beginner</label>
+    <input type="radio" id="intermediate" name="level" value="intermediate">
+    <label for="intermediate">Intermediate</label>
+    <input type="radio" id="advanced" name="level" value="advanced">
+    <label for="advanced">Advanced</label>
+    <br>
+ 
+    <!-- Checkboxes (choose MANY) -->
+    <p>Technologies:</p>
+    <input type="checkbox" id="html" name="tech" value="html">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="tech" value="css">
+    <label for="css">CSS</label>
+    <input type="checkbox" id="js" name="tech" value="javascript">
+    <label for="js">JavaScript</label>
+    <input type="checkbox" id="react" name="tech" value="react">
+    <label for="react">React</label>
+    <input type="checkbox" id="C" name="tech" value="C">
+    <label for="C">C</label>
+    <input type="checkbox" id="python" name="tech" value="python">
+    <label for="python">Python</label>
+    <input type="checkbox" id="java" name="tech" value="java">
+    <label for="java">Java</label>
+    <input type="checkbox" id="node" name="tech" value="node">
+    <label for="node">Node.js</label>
+    <input type="checkbox" id="sql" name="tech" value="sql">
+    <label for="sql">SQL</label>  
+    <br>  
+
+<!-- Dropdown Select -->
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="">-- Choose Country --</option>
+        <option value="in">India</option>
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+    </select>
+    <br>
+ 
+        <!-- Date Picker -->
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob">
+    <br>
+
+    <!-- Textarea (multi-line text) -->
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="5" placeholder="Type here..."></textarea>
+    <br>
+ 
+ <!-- File Upload -->
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc">
+    <br>
+ 
+    <!-- Submit Button -->
+    <button type="submit">Send Message</button>
+    <button type="reset">Clear Form</button>
+ 
+</form>
