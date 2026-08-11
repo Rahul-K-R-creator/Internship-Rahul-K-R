@@ -7,10 +7,10 @@
 }
 /* CSS Custom Properties (variables) - DRY Principle */
 :root {
-    --primary: #1B4F72;
-    --accent: #F18F01;
-    --text: #2C3E50;
-    --light: #F4F6F8;
+    --primary: #0f4c5c;
+    --accent: #FB8B24;
+    --text: #1e293b;
+    --light: #f0f4f8;
     --white: #FFFFFF;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  
