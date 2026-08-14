@@ -66,4 +66,47 @@ window.addEventListener('scroll', () =>{
         }
     })
 })
+//Day 10 - Project Filter System
+const projects =[
+    { id: 1, name: "Weather App", category: "web", tech: ["React", "API"], img: "images/project1.jpg" ,link :"#"},
+    { id: 2, name: "Portfolio Website", category: "web", tech: ["JavaScript"], img: "images/project2.jpg" ,link :"#"},
+    { id: 3, name: "Task Manager", category: "design", tech: ["HTML", "CSS"], img: "images/project3.jpg" ,link :"#"},
+    { id: 4, name: "Sentinal Website", category: "web", tech: ["JavaScript"], img: "images/project4.jpg" ,link :"#"},
+    { id: 5, name: "E-commerce Design", category: "design", tech: ["Figma"], img: "images/project5.jpg" ,link :"#"},
+    { id: 6, name: "Blog Platform", category: "web", tech: ["Node.js", "Express"], img: "images/project6.jpg" ,link :"#"},
+ 
+];
+ 
+function renderProjects(filter="all") {
+    const grid = document.querySelector('.projects-grid');
+    const filtered = filter === "all"
+    ? projects
+    : projects.filter(p => p.category === filter);
+ 
+    grid.innerHTML = filtered.map(project =>
+        `<article class="project-card">
+        <div class="project-card-body">
+        <h3>${project.name}</h3>
+        <img src="${project.img}" alt="${project.name}">
+        <div class="project-tags">
+        ${project.tech.map(t => `<span class="tag">${t}</span>`).join('')}      
+        </div>
+        <a href="${project.link}" class=" btn btn-primary">View Project</a>
+        </div>
+        </article>
+        `).join('');
+}
+ 
+//Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn =>{
+    btn.addEventListener('click',()=>{
+        document.querySelectorAll('.filter-btn').forEach(b =>
+            b.classList.remove('active'));
+            btn.classList.add('active')
+            renderProjects(btn.dataset.filter);
+});
+    });
+ 
+//Intial render
+renderProjects();
  
