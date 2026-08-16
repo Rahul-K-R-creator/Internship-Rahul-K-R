@@ -68,12 +68,12 @@ window.addEventListener('scroll', () =>{
 })
 //Day 10 - Project Filter System
 const projects =[
-    { id: 1, name: "Weather App", category: "web", tech: ["React", "API"], img: "images/project1.jpg" ,link :"#"},
-    { id: 2, name: "Portfolio Website", category: "web", tech: ["JavaScript"], img: "images/project2.jpg" ,link :"#"},
-    { id: 3, name: "Task Manager", category: "design", tech: ["HTML", "CSS"], img: "images/project3.jpg" ,link :"#"},
-    { id: 4, name: "Sentinal Website", category: "web", tech: ["JavaScript"], img: "images/project4.jpg" ,link :"#"},
-    { id: 5, name: "E-commerce Design", category: "design", tech: ["Figma"], img: "images/project5.jpg" ,link :"#"},
-    { id: 6, name: "Blog Platform", category: "web", tech: ["Node.js", "Express"], img: "images/project6.jpg" ,link :"#"},
+    { id: 1, name: "Weather App", category: "web", image: "images/project1.jpg" ,link: "https://weather-report-cyan-gamma.vercel.app/",tech: ["React", "API"]},
+    { id: 2, name: "Portfolio Website", category: "web", image: "images/project2.jpg" ,link :"#", tech: ["JavaScript"]},
+    { id: 3, name: "Task Manager", category: "design", image: "images/project3.jpg" ,link :"#", tech: ["HTML", "CSS"]},
+    { id: 4, name: "Sentinal Website", category: "web", image: "images/project4.jpg" ,link :"https://sentinel-1-xi.vercel.app/", tech: ["JavaScript"]},
+    { id: 5, name: "E-commerce Design", category: "design", image: "images/project5.jpg" ,link :"#", tech: ["Figma"]},
+    { id: 6, name: "Blog Platform", category: "web", image: "images/project6.jpg" ,link :"#", tech: ["Node.js", "Express"]},
  
 ];
  
@@ -87,7 +87,7 @@ function renderProjects(filter="all") {
         `<article class="project-card">
         <div class="project-card-body">
         <h3>${project.name}</h3>
-        <img src="${project.img}" alt="${project.name}">
+        <img src="${project.image}" alt="${project.name}">
         <div class="project-tags">
         ${project.tech.map(t => `<span class="tag">${t}</span>`).join('')}      
         </div>
